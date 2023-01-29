@@ -32,7 +32,7 @@ public class MyAccountPage {
         isDisplayed(LOG_IN_STATUS);
         if (driver.findElement(LOG_IN_ERROR).isDisplayed()) {
             System.out.println("Error: Login failed");
-        }
+        } else System.out.println("Successfully logged in!");
     }
 
 }
