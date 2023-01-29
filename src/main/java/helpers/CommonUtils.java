@@ -67,6 +67,9 @@ public class CommonUtils {
         return getRandomName(7) + getRandomNumber(5);
 
     }
+    public static String getRandomPassword(){
+        return getRandomName(6) + getRandomNumber(4) + "!.";
+    }
     public static String getHref(By locator){
         return getWait().until(ExpectedConditions.presenceOfElementLocated(locator)).getAttribute("href");
     }

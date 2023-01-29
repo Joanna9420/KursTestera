@@ -25,6 +25,13 @@ public class ShopHomePage {
         driver.get(CATEGORY_URL);
         assertEquals(CATEGORY_URL, driver.getCurrentUrl());
     }
+    public static void openMyAccountTab(int number){
+        String MY_ACCOUNT_URL = getHref(By.xpath("(//li[contains(@class,'page_item')]/a)[" + number + "]"));
+        driver.get(MY_ACCOUNT_URL);
+        assertEquals(MY_ACCOUNT_URL, driver.getCurrentUrl());
+        System.out.println("Oczekiwany link: "+ MY_ACCOUNT_URL);
+        System.out.println("Obecny link: "+ driver.getCurrentUrl());
+    }
 
 
 }
