@@ -3,12 +3,11 @@ package pageobjects;
 import static drivers.DriverFactory.driver;
 import static helpers.CommonUtils.*;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 import static selectors.ShopsSelectors.ProductPageSelectors.*;
 
 public class ProductPage {
     public static void addToCart(){
-        assertTrue(driver.findElement(ADD_TO_CART_SELECTOR).isDisplayed());
+        isDisplayed(ADD_TO_CART_SELECTOR);
         click(ADD_TO_CART_SELECTOR);
     }
     public static void checkCart(){

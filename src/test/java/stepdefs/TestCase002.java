@@ -16,7 +16,7 @@ public class TestCase002 {
 
     @When("Open the My Account tab")
     public void openTheMyAccountTab() {
-        ShopHomePage.openMyAccountTab(3);
+        ShopHomePage.openMyAccountTab();
 
     }
 

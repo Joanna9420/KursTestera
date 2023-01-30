@@ -1,6 +1,5 @@
 package pageobjects;
 
-import static drivers.DriverFactory.driver;
 import static helpers.CommonUtils.*;
 import static selectors.ShopsSelectors.MyAccountPageSelectors.*;
 
@@ -30,7 +29,7 @@ public class MyAccountPage {
 
     public static void checkLoginSatus() {
         isDisplayed(LOG_IN_STATUS);
-        if (driver.findElement(LOG_IN_ERROR).isDisplayed()) {
+        if (isDisplayed(LOG_IN_ERROR)) {
             System.out.println("Error: Login failed");
         } else System.out.println("Successfully logged in!");
     }
